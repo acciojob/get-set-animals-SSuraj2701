@@ -2,19 +2,19 @@
 class Animal 
 {
 	Constructor(species){
-		this.species=species;
+		this._species=species;
 	
 	}
 	get species(){
-		return this.species
+		return this._species;
 	}
 	makesound(){
-		return `The ${species} makes a sound`
+		return `The ${this._species} makes a sound`
 	}
 }
 
 class Dog extends Animal {
-	Constructor(speices){
+	constructor(speices){
 	super(speices)
 }
 	bark(){
@@ -23,10 +23,12 @@ class Dog extends Animal {
 }
 
 class Cat extends Animal {
-	Constructor(species){
+	constructor(species){
 		super(species)
 	}
+	purr(){
 	return `purr`
+	}
 }
 
 // Do not change the code below this line
